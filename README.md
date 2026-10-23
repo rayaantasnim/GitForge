@@ -244,6 +244,10 @@ export class CustomLinterPlugin implements GitForgePlugin {
 
 ---
 
+<p>
+  <span>Disclaimer:</span> This is a fictional, world-building, and creative system architecture concept set in the year 2027. GitForge IDE, its technical specifications, metrics, and associated entities mentioned herein are purely imaginative and do not represent a real commercial product, service, or existing platform.
+</p>
+
 <p align="center">
 Authorized by Rayaan Tasnim<br>
 © GitForge IDE; All rights reserved<br>
