@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Character Encoding & Layout Engine Controls -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      GitForge IDE — Isolated Docker Sandbox & GitHub Actions VMs Architecture
+    </title>
+    <meta
+      name="description"
+      content="Explore GitForge IDE's enterprise security architecture. Features micro-VM hypervisor isolation via Firecracker, deterministic rootless Podman container sandboxing, zero-trust eBPF/Cilium networking virtualization, and OverlayFS Copy-on-Write storage volumes."
+    />
+    <meta
+      name="keywords"
+      content="GitForge IDE, Firecracker micro-VM, Docker Sandbox, GitHub Actions Runner, eBPF Network Filter, Cilium, Rootless Podman, OverlayFS, TPM 2.0 Enclave, in-toto Provenance, Zero-Trust Architecture, Rayaan Tasnim, Olympiad Edge, Cloud IDE Architecture"
+    />
+    <meta name="author" content="Rayaan Tasnim" />
+    <meta name="publisher" content="IDAI Universe" />
+    <meta
+      name="copyright"
+      content="© 2027 GitForge IDE. All rights reserved."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://rayaantasnim.github.io/GitForge/" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GitForge IDE" />
+    <meta
+      property="og:title"
+      content="GitForge IDE — Isolated Docker Sandbox & GitHub Actions VMs Architecture"
+    />
+    <meta
+      property="og:description"
+      content="Absolute tenant isolation without performance compromises: Dive deep into GitForge's hypervisor layer, rootless container engines, eBPF network virtualization, and hardware security enclaves."
+    />
+    <meta property="og:url" content="https://rayaantasnim.github.io/GitForge/" />
+    <meta property="og:image" content="https://rayaantasnim.github.io/GitForge/" />
+    <meta property="og:image:secure_url" content="https://rayaantasnim.github.io/GitForge/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="GitForge IDE Sandbox Subsystem Topology Diagram showing Firecracker micro-VMs and eBPF filters"
+    />
+    <meta
+      property="article:published_time"
+      content="2026-10-23T15:21:00+06:00"
+    />
+    <meta property="article:author" content="Rayaan Tasnim" />
+    <meta property="article:section" content="Software Architecture" />
+    <meta property="article:tag" content="Hypervisor" />
+    <meta property="article:tag" content="Container Security" />
+    <meta property="article:tag" content="eBPF" />
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GitForgeIDE" />
+    <meta name="twitter:creator" content="@RayaanTasnim" />
+    <meta
+      name="twitter:title"
+      content="GitForge IDE — Isolated Docker Sandbox & GitHub Actions VMs Architecture"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover how GitForge runs multi-stage docker-compose stacks safely within custom Linux micro-kernels using Rootless Podman and Seccomp BPF filters."
+    />
+    <meta name="twitter:image" content="https://rayaantasnim.github.io/GitForge/" />
+
+    <!-- Unified Schema.org JSON-LD Structured Data Block -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://rayaantasnim.github.io/GitForge/#article",
+            "isPartOf": {
+              "@type": "WebPage",
+              "@id": "https://rayaantasnim.github.io/GitForge/",
+              "url": "https://rayaantasnim.github.io/GitForge/",
+              "name": "GitForge IDE — Isolated Docker Sandbox & GitHub Actions VMs Architecture",
+              "description": "Deep-dive technical specification documentation covering the hypervisor isolation, rootless container execution layer, and cryptographic integrity sub-systems of GitForge IDE."
+            },
+            "headline": "Isolated Docker Sandbox & GitHub Actions VMs Architecture",
+            "description": "Comprehensive analysis of GitForge's zero-trust execution sandbox, powered by hardware-assisted virtualization via Firecracker, rootless container engines, and eBPF kernel network policy scopes.",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": "https://rayaantasnim.github.io/GitForge/",
+            "datePublished": "2026-10-23T15:21:00+06:00",
+            "dateModified": "2026-10-23T15:21:00+06:00",
+            "author": {
+              "@type": "Person",
+              "name": "Rayaan Tasnim",
+              "jobTitle": "System Architect",
+              "affiliation": {
+                "@type": "Organization",
+                "name": "IDAI Universe"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "GitForge IDE",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://rayaantasnim.github.io/GitForge/"
+              },
+              "slogan": "Impenetrable Security for Modern Workspaces"
+            },
+            "keywords": "Firecracker, Docker Sandbox, GitHub Actions, eBPF, Cilium, Podman, OverlayFS, TPM 2.0, in-toto, KVM Sandboxing",
+            "dependencies": "Firecracker VMM, Linux Kernel KVM, Podman, Containerd, Cilium eBPF, ZFS NVMe Pool, TPM 2.0",
+            "proficiencyLevel": "Advanced",
+            "articleSection": "Software Systems Architecture"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://rayaantasnim.github.io/GitForge/",
+            "name": "GitForge IDE",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cloud, Browser-Native, Linux, macOS, Windows",
+            "releaseNotes": "https://rayaantasnim.github.io/GitForge/",
+            "provider": {
+              "@type": "Organization",
+              "name": "Olympiad Edge"
+            },
+            "sponsor": {
+              "@type": "Organization",
+              "name": "IDAI Universe"
+            },
+            "softwareRequirements": "Modern Web Browser with WebGPU and WebAssembly support",
+            "offers": {
+              "@type": "Offer",
+              "price": "0.00",
+              "priceCurrency": "USD",
+              "description": "Free compute allocation tier for open-source developers on Olympiad Edge federated node systems."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="design/architecture.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Cosmic Cyberpunk Styles -->
+     <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/architecture.css" />
+  </head>
+  <body
+    class="min-h-screen bg-space text-slate-100 grid-pattern relative selection:bg-cyan-500/30 selection:text-cyan-200"
+  >
+    <!-- 1. STICKY FIXED TOP HEADER LAYER -->
+    <header
+      class="fixed top-0 left-0 right-0 z-40 h-20 bg-space/85 backdrop-blur-md border-b border-cyan-500/15 flex items-center justify-between px-6 md:px-12 transition-all duration-300"
+    >
+      <!-- Navbar Brand Text strictly on the left with neon glowing dot indicator -->
+      <a
+        href="core.html"
+        class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tight text-white group"
+      >
+        <span>GitForge IDE</span>
+        <span class="cyber-dot" aria-label="Engine Active"></span>
+      </a>
+
+      <!-- Single Custom Hamburger Toggle Icon on the far right -->
+      <button
+        id="menuToggle"
+        class="relative group p-3 text-cyan-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg"
+        aria-label="Open Navigation Panel"
+      >
+        <div class="w-7 h-5 flex flex-col justify-between items-end">
+          <span
+            class="w-7 h-0.5 bg-cyan-400 rounded-full group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+        </div>
+      </button>
+    </header>
+
+    <!-- 2. RIGHT-SIDE SLIDEDOWN/OVERLAY MOBILE-RESPONSIVE MENU -->
+    <div
+      id="menuBackdrop"
+      class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <aside
+      id="menuOverlay"
+      class="fixed top-0 right-0 bottom-0 w-full sm:w-96 max-w-full bg-[#070714]/98 border-l border-cyan-500/30 z-50 p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-[-16px_0_40px_rgba(0,0,0,0.85)] pointer-events-none overflow-y-auto"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between pb-8 mb-8 border-b border-cyan-500/20"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-sm font-mono tracking-widest text-cyan-400 uppercase"
+              >Ecosystem Map</span
+            >
+          </div>
+          <button
+            id="menuClose"
+            class="px-3 py-1.5 rounded text-xs font-mono tracking-wider text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+            aria-label="Close Navigation Panel"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-5 text-left font-mono">
+          <a
+            href="core.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Core</span>
+          </a>
+          <a
+            href="facilities.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Facilities</span>
+          </a>
+          <a
+            href="technology.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Technology</span>
+          </a>
+          <a
+            href="release.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Release</span>
+          </a>
+          <a
+            href="contributor.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Contributor</span>
+          </a>
+          <a
+            href="architecture.html"
+            class="nav-menu-link text-xl text-cyan-400 font-semibold tracking-wide flex items-center gap-3"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"
+            ></span>
+            <span>Architecture</span>
+          </a>
+          <a
+            href="ecosystem.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Ecosystem</span>
+          </a>
+        </nav>
+      </div>
+
+      <div
+        class="pt-8 border-t border-cyan-500/15 font-mono text-xs text-slate-400 space-y-1"
+      >
+        <p class="text-cyan-400 font-medium">GitForge IDE System v2027</p>
+        <p>Authorized by Rayaan Tasnim</p>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20">
+      <!-- 3. PREMIUM HERO BANNER -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center px-6 md:px-12 overflow-hidden cosmic-gradient-bg border-b border-cyan-500/15"
+      >
+        <div
+          class="absolute top-1/4 left-1/3 w-[620px] h-[620px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-[420px] h-[420px] bg-magentaNeon/10 rounded-full blur-[130px] pointer-events-none"
+        ></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 py-20">
+          <div
+            class="inline-flex items-center gap-3 px-4 py-1.5 mb-8 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-xs font-mono text-cyan-300 tracking-wider"
+          >
+            <span>DOCKER ISOLATION</span>
+            <span>·</span>
+            <span>GITHUB ACTIONS VIRTUAL MACHINES</span>
+            <span>·</span>
+            <span class="text-matrixGreen">ZERO-TRUST SECCOMP</span>
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto"
+          >
+            Isolated
+            <span
+              class="bg-gradient-to-r from-cyan-400 via-indigo-300 to-magentaNeon bg-clip-text text-transparent"
+              >Docker Sandbox</span
+            >
+            &amp; GitHub Actions VMs
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+          >
+            GitForge executes arbitrary developer code, test runs, and container
+            daemons inside cryptographically isolated micro-VMs. Powered by
+            hardware-assisted virtualization and eBPF network filters.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="ecosystem.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-semibold rounded-md transition-all duration-200 cyber-glow-cyan text-sm tracking-wide"
+            >
+              Explore Plugin Marketplace &rarr;
+            </a>
+            <a
+              href="core.html"
+              class="px-8 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-semibold rounded-md border border-cyan-500/30 transition-all duration-200 text-sm tracking-wide"
+            >
+              Review Core VFS Layers
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXACTLY 6 HYPER-DETAILED CONCEPTUAL ROWS -->
+      <section
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 space-y-28 md:space-y-36"
+      >
+        <!-- CONCEPTUAL ROW 1: Micro-VM Hypervisor Isolation -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Architecture 01 · Hypervisor Layer</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Micro-VM Hypervisor Isolation with Sub-Millisecond Jails
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every user workspace terminal is backed by a dedicated Firecracker
+              micro-VM executing a minimalist Linux kernel stripped of unneeded
+              drivers. Jails boot in less than 5 milliseconds, consuming merely
+              5MB of base hypervisor memory overhead.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Even in the event of an untrusted npm postinstall script
+              attempting root privilege escalation, the exploit remains strictly
+              quarantined within hardware memory boundaries managed by KVM.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300 space-y-2"
+            >
+              <div class="text-cyan-400 font-semibold">
+                // Micro-VM Isolation Specifications
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-slate-400">
+                <div>
+                  Boot Latency:
+                  <span class="text-cyan-300 font-bold"
+                    >4.8ms from Cold Memory</span
+                  >
+                </div>
+                <div>
+                  Hypervisor:
+                  <span class="text-cyan-300 font-bold"
+                    >Custom Firecracker VMM</span
+                  >
+                </div>
+                <div>
+                  Memory Footprint:
+                  <span class="text-cyan-300 font-bold"
+                    >5.2MB baseline / VM</span
+                  >
+                </div>
+                <div>
+                  Isolation:
+                  <span class="text-matrixGreen font-bold"
+                    >Hardware KVM Boundary</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Micro-VM Hypervisor Isolation"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  FIRECRACKER // KVM_SANDBOX
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 2: Docker Container Sandboxing -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Deterministic Docker Sandboxing & Seccomp"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  DOCKER_SEC // SECCOMP_BPF
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Architecture 02 · Container Engine</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Deterministic Docker Sandboxing &amp; Seccomp Profiles
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Developers can execute multi-stage
+              <code class="text-cyan-300 font-mono">docker compose</code> stacks
+              directly within the GitForge browser workspace. Containers run
+              unprivileged using rootless Podman and containerd runtimes.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Custom Seccomp BPF filters intercept and whitelist only safe
+              system calls, blocking raw socket manipulation, kernel module
+              loads, and unauthorized namespace manipulations.
+            </p>
+            <div
+              class="flex items-center gap-4 text-xs font-mono text-slate-300 bg-navy/60 p-3 rounded border border-cyan-500/15"
+            >
+              <span class="text-matrixGreen">Rootless Execution</span>
+              <span>·</span>
+              <span class="text-cyan-300">Seccomp Whitelist</span>
+              <span>·</span>
+              <span class="text-slate-400">Compose v2 Supported</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 3: GitHub Actions VMs -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Architecture 03 · CI/CD Federation</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Ephemeral GitHub Actions Compute Worker Federation
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              GitForge integrates with GitHub's compute infrastructure.
+              Workflows configured in
+              <code class="text-cyan-300 font-mono">.github/workflows</code> can
+              execute on specialized high-core Olympiad Edge runners with
+              pre-warmed cache layers.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Test steps run concurrently across distributed Linux, macOS, and
+              Windows runners, streaming logs directly to the IDE's interactive
+              output pane with sub-second latency.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300"
+            >
+              <div class="text-cyanNeon font-semibold mb-1">
+                Actions Runner SLA: Sub-200ms Step Dispatch
+              </div>
+              <div class="text-slate-400">
+                Pre-cached action steps and content-addressed npm/cargo caches
+                reduce standard CI pipeline runtimes by 78%.
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Ephemeral GitHub Actions Compute Worker Federation"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  ACTIONS_RUNNER // GITHUB_FEDERATED
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 4: eBPF Network Virtualization -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Multi-Tenant Zero-Trust Network Virtualization eBPF"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  EBPF_FILTER // ZERO_TRUST_MESH
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Architecture 04 · Network Policy</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Multi-Tenant Zero-Trust Network Virtualization (eBPF)
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every sandbox operates within its own software-defined overlay
+              network. Powered by Cilium and eBPF kernel probes, network packets
+              are scrutinized at the socket layer before reaching the network
+              interface.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Lateral traversal between isolated user tenants is strictly
+              impossible at the kernel level, while outbound egress traffic is
+              monitored for anomalous cryptographic mining or exfiltration
+              patterns.
+            </p>
+            <div
+              class="flex items-center gap-6 pt-2 font-mono text-xs text-slate-400"
+            >
+              <div>
+                Network Standard:
+                <span class="text-cyan-300">Cilium eBPF Mesh</span>
+              </div>
+              <div>
+                Packet Overhead: <span class="text-cyan-300">&lt; 0.03ms</span>
+              </div>
+              <div>
+                Tenant Isolation:
+                <span class="text-cyan-300"
+                  >L3/L4/L7 Cryptographic Enforce</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 5: OverlayFS COW Volumes -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Architecture 05 · Storage Subsystem</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Immutable Root Filesystems &amp; OverlayFS COW Volumes
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Base development images (Ubuntu, Alpine, Debian) are mounted as
+              read-only cryptographic blocks. All user filesystem writes, build
+              artifacts, and modified source files are captured in an ephemeral
+              Copy-on-Write (COW) layer.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Reverting workspace state after an errant installation command is
+              as instantaneous as discarding the upper delta layer, restoring
+              the clean pristine baseline in less than 2 milliseconds.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-400 space-y-1"
+            >
+              <div>
+                Storage Architecture:
+                <span class="text-cyan-300 font-bold"
+                  >OverlayFS on ZFS NVMe Pool</span
+                >
+              </div>
+              <div>
+                Rollback Time:
+                <span class="text-cyan-300 font-bold"
+                  >1.8ms Instant Snapshot Revert</span
+                >
+              </div>
+              <div>
+                Deduplication:
+                <span class="text-cyan-300 font-bold"
+                  >Block-Level Zero-Duplicate Storage</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Immutable Root Filesystem Layers & OverlayFS COW Volumes"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  OVERLAYFS // INSTANT_ROLLBACK
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 6: Hardware Security Enclave Attestation -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Encrypted Key Escrow & Hardware Security Enclave Attestation"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  HSM_ATTEST // TPM2_SECURE
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Architecture 06 · Cryptographic Integrity</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Encrypted Key Escrow &amp; Hardware Security Enclave
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Secret keys, API tokens, and cloud deployment credentials are
+              never stored in plaintext within container environments. Tokens
+              are decrypted only inside TPM 2.0 hardware security enclaves on a
+              just-in-time basis.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every built binary and container release receives a signed
+              Software Bill of Materials (SBOM) and in-toto provenance
+              attestation cryptographically linked to the developer's verified
+              identity.
+            </p>
+            <div class="flex flex-wrap gap-3 font-mono text-xs">
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >TPM 2.0 Enclave</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >in-toto Provenance</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Cosign Attestation</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ONE STRIKING CONCLUSION SECTION -->
+      <section
+        class="relative py-24 px-6 md:px-12 my-20 border-y border-cyan-500/20 bg-gradient-to-b from-[#090b1e]/90 via-[#05050a] to-[#090b1e]/90"
+      >
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
+          <div
+            class="text-xs font-mono text-cyan-400 uppercase tracking-widest"
+          >
+            Architectural Summary
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Impenetrable Security for Modern Workspaces
+          </h2>
+          <p
+            class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            From KVM-backed micro-VMs to eBPF network perimeters, GitForge
+            delivers absolute tenant isolation without sacrificing developer
+            performance. Discover the expansive marketplace and plugin
+            ecosystem.
+          </p>
+          <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a
+              href="ecosystem.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-bold rounded text-sm tracking-wide cyber-glow-cyan transition-all"
+            >
+              Discover Ecosystem &rarr;
+            </a>
+            <a
+              href="core.html"
+              class="px-8 py-3.5 border border-cyan-500/40 hover:border-cyan-400 bg-space text-slate-200 font-semibold rounded text-sm tracking-wide transition-all"
+            >
+              Return to Core Layers
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. THE GLOBAL STATIC MINIMALIST 5-LINE FOOTER -->
+    <footer
+      class="border-t border-cyan-500/20 bg-[#040408] py-14 px-6 text-center font-mono text-xs md:text-sm text-slate-400 leading-relaxed tracking-wider"
+    >
+      <div class="space-y-2">
+        <p class="text-slate-300">Authorized by Rayaan Tasnim</p>
+        <p class="text-slate-400">&copy; GitForge IDE; All rights reserved</p>
+        <p class="text-cyan-400">Powered by Olympiad Edge</p>
+        <p class="text-magentaNeon">Sponsored by IDAI Universe</p>
+        <p class="text-matrixGreen">Launched by GitHub</p>
+      </div>
+    </footer>
+
+    <!-- GSAP INTERACTIVE LOGIC SCRIPT -->
+    <script src="js/architecture.js"></script>
+  </body>
+</html>

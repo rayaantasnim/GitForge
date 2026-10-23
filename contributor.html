@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Character Encoding & Layout Engine Controls -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      GitForge IDE — Open-Source Contribution Guidelines & Branching Protocol
+    </title>
+    <meta
+      name="description"
+      content="Explore official GitForge IDE contribution rules. Learn about our 14-day RFC consensus lifecycle, strict linear rebasing taxonomy, deterministic test cgroups, 24-hour review SLA, and GPG cryptographic commit signing mandates."
+    />
+    <meta
+      name="keywords"
+      content="GitForge IDE, Open-Source Contribution, RFC Consensus, Conventional Commits, Developer Certificate of Origin, DCO Sign-off, Hermetic cgroups, Test Matrices, Review SLA, GPG Commit Signing, Ed25519, Rayaan Tasnim, Core Architecture Council"
+    />
+    <meta name="author" content="Rayaan Tasnim" />
+    <meta name="publisher" content="IDAI Universe" />
+    <meta
+      name="copyright"
+      content="© 2027 GitForge IDE. All rights reserved."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://rayaantasnim.github.io/GitForge/" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GitForge IDE" />
+    <meta
+      property="og:title"
+      content="GitForge IDE — Open-Source Contribution Guidelines & Branching Protocol"
+    />
+    <meta
+      property="og:description"
+      content="Join elite systems engineers building next-era tooling. Review our uncompromising code quality standards, architectural governance gates, and cryptographic commit validations."
+    />
+    <meta
+      property="og:url"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+    <meta
+      property="og:image"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="GitForge IDE Governance and RFC Consensus Lifecycle Flowchart"
+    />
+    <meta
+      property="article:published_time"
+      content="2026-10-23T15:25:00+06:00"
+    />
+    <meta property="article:author" content="Rayaan Tasnim" />
+    <meta property="article:section" content="Open Source Governance" />
+    <meta property="article:tag" content="Git Workflow" />
+    <meta property="article:tag" content="Code Quality" />
+    <meta property="article:tag" content="Cryptographic Security" />
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GitForgeIDE" />
+    <meta name="twitter:creator" content="@RayaanTasnim" />
+    <meta
+      name="twitter:title"
+      content="GitForge IDE — Open-Source Contribution Guidelines & Branching Protocol"
+    />
+    <meta
+      name="twitter:description"
+      content="Upholding uncompromising code standards with a 24h review SLA, strict linear history, and 95% line coverage invariants."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+
+    <!-- Unified Schema.org JSON-LD Structured Data Block -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://rayaantasnim.github.io/GitForge/",
+            "isPartOf": {
+              "@type": "WebPage",
+              "@id": "https://rayaantasnim.github.io/GitForge/",
+              "url": "https://rayaantasnim.github.io/GitForge/",
+              "name": "GitForge IDE — Open-Source Contribution Guidelines & Branching Protocol",
+              "description": "Official architectural governance policies, version control standards, quality gates, and security requirements for community contributors to the GitForge project ecosystem."
+            },
+            "headline": "Open-Source Contribution Guidelines & Branching Protocol",
+            "description": "A comprehensive guide to GitForge's decentralized community governance system, covering the Core Architecture Council RFC protocol, semantic conventional commits, hermetic cgroup test invariants, and GPG signature verification steps.",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": "https://rayaantasnim.github.io/GitForge/",
+            "datePublished": "2026-10-23T15:25:00+06:00",
+            "dateModified": "2026-10-23T15:25:00+06:00",
+            "author": {
+              "@type": "Person",
+              "name": "Rayaan Tasnim",
+              "jobTitle": "System Architect",
+              "affiliation": {
+                "@type": "Organization",
+                "name": "IDAI Universe"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "GitForge IDE",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://rayaantasnim.github.io/GitForge/"
+              },
+              "slogan": "Architected Together for the 2027 Era"
+            },
+            "keywords": "RFC Governance, Council Quorum, Linear Rebase, Conventional Commits, DCO Sign-off, Hermetic cgroups, Monotonic Invariant, Ed25519 GPG, PGP Security Portal",
+            "proficiencyLevel": "Expert",
+            "articleSection": "Developer Governance & Operations"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rayaantasnim.github.io/GitForge/",
+            "url": "https://rayaantasnim.github.io/GitForge/",
+            "name": "GitForge IDE",
+            "publisher": {
+              "@type": "Organization",
+              "name": "GitForge IDE"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="contributor.html"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Cosmic Cyberpunk Styles -->
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/contributor.css" />
+  </head>
+  <body
+    class="min-h-screen bg-space text-slate-100 grid-pattern relative selection:bg-cyan-500/30 selection:text-cyan-200"
+  >
+    <!-- 1. STICKY FIXED TOP HEADER LAYER -->
+    <header
+      class="fixed top-0 left-0 right-0 z-40 h-20 bg-space/85 backdrop-blur-md border-b border-cyan-500/15 flex items-center justify-between px-6 md:px-12 transition-all duration-300"
+    >
+      <!-- Navbar Brand Text strictly on the left with neon glowing dot indicator -->
+      <a
+        href="core.html"
+        class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tight text-white group"
+      >
+        <span>GitForge IDE</span>
+        <span class="cyber-dot" aria-label="Engine Active"></span>
+      </a>
+
+      <!-- Single Custom Hamburger Toggle Icon on the far right -->
+      <button
+        id="menuToggle"
+        class="relative group p-3 text-cyan-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg"
+        aria-label="Open Navigation Panel"
+      >
+        <div class="w-7 h-5 flex flex-col justify-between items-end">
+          <span
+            class="w-7 h-0.5 bg-cyan-400 rounded-full group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+        </div>
+      </button>
+    </header>
+
+    <!-- 2. RIGHT-SIDE SLIDEDOWN/OVERLAY MOBILE-RESPONSIVE MENU -->
+    <div
+      id="menuBackdrop"
+      class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <aside
+      id="menuOverlay"
+      class="fixed top-0 right-0 bottom-0 w-full sm:w-96 max-w-full bg-[#070714]/98 border-l border-cyan-500/30 z-50 p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-[-16px_0_40px_rgba(0,0,0,0.85)] pointer-events-none overflow-y-auto"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between pb-8 mb-8 border-b border-cyan-500/20"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-sm font-mono tracking-widest text-cyan-400 uppercase"
+              >Ecosystem Map</span
+            >
+          </div>
+          <button
+            id="menuClose"
+            class="px-3 py-1.5 rounded text-xs font-mono tracking-wider text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+            aria-label="Close Navigation Panel"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-5 text-left font-mono">
+          <a
+            href="core.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Core</span>
+          </a>
+          <a
+            href="facilities.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Facilities</span>
+          </a>
+          <a
+            href="technology.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Technology</span>
+          </a>
+          <a
+            href="release.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Release</span>
+          </a>
+          <a
+            href="contributor.html"
+            class="nav-menu-link text-xl text-cyan-400 font-semibold tracking-wide flex items-center gap-3"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"
+            ></span>
+            <span>Contributor</span>
+          </a>
+          <a
+            href="architecture.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Architecture</span>
+          </a>
+          <a
+            href="ecosystem.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Ecosystem</span>
+          </a>
+        </nav>
+      </div>
+
+      <div
+        class="pt-8 border-t border-cyan-500/15 font-mono text-xs text-slate-400 space-y-1"
+      >
+        <p class="text-cyan-400 font-medium">GitForge IDE System v2027</p>
+        <p>Authorized by Rayaan Tasnim</p>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20">
+      <!-- 3. PREMIUM HERO BANNER -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center px-6 md:px-12 overflow-hidden cosmic-gradient-bg border-b border-cyan-500/15"
+      >
+        <div
+          class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[140px] pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-cyan-600/15 rounded-full blur-[120px] pointer-events-none"
+        ></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 py-20">
+          <div
+            class="inline-flex items-center gap-3 px-4 py-1.5 mb-8 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-xs font-mono text-cyan-300 tracking-wider"
+          >
+            <span>COMMUNITY GOVERNANCE</span>
+            <span>·</span>
+            <span>OPEN SOURCE ALLIANCE</span>
+            <span>·</span>
+            <span class="text-matrixGreen">RFC SPECIFICATION</span>
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto"
+          >
+            Open-Source
+            <span
+              class="bg-gradient-to-r from-teal-300 via-cyan-400 to-matrixGreen bg-clip-text text-transparent"
+              >Contribution Guidelines</span
+            >
+            &amp; Branching
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+          >
+            GitForge is built by elite software engineers worldwide. We uphold
+            uncompromising code quality, deterministic test invariants, and
+            cryptographic commit attestation across every merge request.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="architecture.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-semibold rounded-md transition-all duration-200 cyber-glow-cyan text-sm tracking-wide"
+            >
+              Inspect Sandbox Architecture &rarr;
+            </a>
+            <a
+              href="ecosystem.html"
+              class="px-8 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-semibold rounded-md border border-cyan-500/30 transition-all duration-200 text-sm tracking-wide"
+            >
+              Explore Plugin Ecosystem
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXACTLY 6 HYPER-DETAILED CONCEPTUAL ROWS -->
+      <section
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 space-y-28 md:space-y-36"
+      >
+        <!-- CONCEPTUAL ROW 1: Architectural Governance -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Guideline 01 · RFC Consensus Protocol</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Architectural Governance &amp; RFC Consensus Lifecycle
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every substantive change to internal C++23 kernel headers,
+              WebAssembly interfaces, or AST serialization requires a formal
+              Request for Comments (RFC). RFCs undergo a minimum 14-day
+              technical review window by the Core Architecture Council.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Proposals must outline concrete microbenchmark criteria, cache
+              miss profiles, and fallback mitigations before receiving unanimous
+              consensus approval.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300 space-y-2"
+            >
+              <div class="text-cyan-400 font-semibold">
+                // RFC Review Process States
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-slate-400">
+                <div>
+                  Draft &amp; Benchmarks:
+                  <span class="text-cyan-300 font-bold">Phase 1</span>
+                </div>
+                <div>
+                  Council Review Window:
+                  <span class="text-cyan-300 font-bold">14 Days Minimum</span>
+                </div>
+                <div>
+                  Consensus Requirement:
+                  <span class="text-cyan-300 font-bold"
+                    >Unanimous 5/5 Quorum</span
+                  >
+                </div>
+                <div>
+                  Final Implementation:
+                  <span class="text-matrixGreen font-bold"
+                    >Guaranteed Inclusion</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Architectural Governance & RFC Lifecycle"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  RFC_GOVERNANCE // COUNCIL_QUORUM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 2: Semantic Branching -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Strict Semantic Branching & Hermetic Pull Request Protocol"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  GIT_TREE // LINEAR_REBASE
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Guideline 02 · Version Control Standards</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Strict Semantic Branching &amp; Hermetic PR Protocol
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              We enforce a linear git history without merge bubbles. Branch
+              names must follow the semantic taxonomy:
+              <code class="text-cyan-300 font-mono"
+                >feat/core/&lt;topic&gt;</code
+              >,
+              <code class="text-cyan-300 font-mono">fix/wasm/&lt;topic&gt;</code
+              >, or
+              <code class="text-cyan-300 font-mono"
+                >perf/simd/&lt;topic&gt;</code
+              >.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every commit message must satisfy the Conventional Commits
+              specification, referencing tracked GitHub issue IDs and including
+              signed cryptographic DCO (Developer Certificate of Origin) tags.
+            </p>
+            <div
+              class="flex items-center gap-4 text-xs font-mono text-slate-300 bg-navy/60 p-3 rounded border border-cyan-500/15"
+            >
+              <span class="text-matrixGreen">Strict Linear Rebase</span>
+              <span>·</span>
+              <span class="text-cyan-300">Semantic Conventional Commits</span>
+              <span>·</span>
+              <span class="text-slate-400">DCO Sign-off Required</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 3: Test Matrices & Invariants -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Guideline 03 · Quality Verification</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Deterministic Test Matrices &amp; Hermetic Re-Entrancy
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Test execution must be 100% deterministic with zero flaky passes.
+              Every test suite runs inside isolated network-isolated cgroups
+              where system clocks and random seeds are frozen to predictable
+              vectors.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Pull requests that decrease line or branch coverage by even 0.01%
+              are blocked automatically by our CI bot, preserving the absolute
+              reliability of the GitForge core engine.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300"
+            >
+              <div class="text-cyanNeon font-semibold mb-1">
+                Coverage Gate: 95.00% Strict Monotonic Invariant
+              </div>
+              <div class="text-slate-400">
+                Property-based testing via QuickCheck/Hypothesis runs on all
+                state mutations to uncover edge-case regressions.
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Deterministic Test Matrices & Invariants"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  TEST_SUITE // HERMETIC_CGROUP
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 4: Code Review SLA -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="High-Performance Contribution Pipeline & Review SLA"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  CI_REVIEW // 24H_SLA
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Guideline 04 · Review Efficiency</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              High-Performance Contribution Pipeline &amp; 24h SLA
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              We respect community contributors' time. Maintainers guarantee an
+              initial thorough code review within 24 hours of submission.
+              Automated CI bots post comprehensive performance diffs comparing
+              memory consumption and instruction counts.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              If an author's PR meets all safety checks and passes benchmarking
+              matrices, it is fast-tracked into the nightly integration branch
+              without administrative delay.
+            </p>
+            <div
+              class="flex items-center gap-6 pt-2 font-mono text-xs text-slate-400"
+            >
+              <div>
+                Review SLA: <span class="text-cyan-300">&lt; 24 Hours</span>
+              </div>
+              <div>
+                Automated Perf Bot:
+                <span class="text-cyan-300">Instruction-Level Diffs</span>
+              </div>
+              <div>
+                Merge Criteria:
+                <span class="text-cyan-300">2 Senior Approvals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 5: Security Disclosure & Commit Signing -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Guideline 05 · Cryptographic Trust</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Security Disclosure &amp; Cryptographic Commit Signing
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              All code submissions must be cryptographically signed using GPG or
+              SSH keys verified against GitHub identity profiles. Unsigned
+              commits are immediately rejected by branch protection rules.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Security researchers discovering vulnerabilities are invited to
+              submit through our encrypted PGP security portal, with bug
+              bounties awarded in accordance with CVSS v3.1 severity scores.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-400 space-y-1"
+            >
+              <div>
+                Signature Requirement:
+                <span class="text-cyan-300 font-bold"
+                  >Ed25519 or RSA-4096 GPG</span
+                >
+              </div>
+              <div>
+                Vulnerability SLA:
+                <span class="text-cyan-300 font-bold"
+                  >4-Hour Acknowledgement</span
+                >
+              </div>
+              <div>
+                Bounty Program:
+                <span class="text-cyan-300 font-bold"
+                  >Up to $50,000 for Critical Sandbox Escapes</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Security Disclosure & Cryptographic Commit Signing"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  GPG_SIGN // ED25519_VERIFIED
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 6: Contributor Recognition & Mentorship -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Contributor Recognition & Mentorship Framework"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MENTOR_GRAPH // GLOBAL_ALLIANCE
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Guideline 06 · Community Development</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Contributor Recognition &amp; Decentralized Mentorship
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every engineer who lands a patch in GitForge is honored in the
+              permanent genesis ledger and receives complimentary compute
+              credits on Olympiad Edge clusters.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Senior maintainers host weekly asynchronous pairing hours and
+              technical office hours, helping junior systems engineers master
+              low-level WASM, SIMD optimizations, and kernel sandboxing
+              techniques.
+            </p>
+            <div class="flex flex-wrap gap-3 font-mono text-xs">
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Genesis Ledger Entry</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Olympiad Compute Grant</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Asynchronous Pairing</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ONE STRIKING CONCLUSION SECTION -->
+      <section
+        class="relative py-24 px-6 md:px-12 my-20 border-y border-cyan-500/20 bg-gradient-to-b from-[#090b1e]/90 via-[#05050a] to-[#090b1e]/90"
+      >
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
+          <div
+            class="text-xs font-mono text-cyan-400 uppercase tracking-widest"
+          >
+            Community Covenant
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Architected Together for the 2027 Era
+          </h2>
+          <p
+            class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            By contributing to GitForge IDE, you join a global community
+            establishing the standard for high-speed, secure developer tooling.
+            Explore the isolated Docker sandboxes protecting our runtime.
+          </p>
+          <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a
+              href="architecture.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-bold rounded text-sm tracking-wide cyber-glow-cyan transition-all"
+            >
+              Inspect Sandbox Architecture &rarr;
+            </a>
+            <a
+              href="ecosystem.html"
+              class="px-8 py-3.5 border border-cyan-500/40 hover:border-cyan-400 bg-space text-slate-200 font-semibold rounded text-sm tracking-wide transition-all"
+            >
+              Discover Extension Marketplace
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. THE GLOBAL STATIC MINIMALIST 5-LINE FOOTER -->
+    <footer
+      class="border-t border-cyan-500/20 bg-[#040408] py-14 px-6 text-center font-mono text-xs md:text-sm text-slate-400 leading-relaxed tracking-wider"
+    >
+      <div class="space-y-2">
+        <p class="text-slate-300">Authorized by Rayaan Tasnim</p>
+        <p class="text-slate-400">&copy; GitForge IDE; All rights reserved</p>
+        <p class="text-cyan-400">Powered by Olympiad Edge</p>
+        <p class="text-magentaNeon">Sponsored by IDAI Universe</p>
+        <p class="text-matrixGreen">Launched by GitHub</p>
+      </div>
+    </footer>
+
+    <!-- GSAP INTERACTIVE LOGIC SCRIPT -->
+    <script src="js/contributor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <!-- Character Encoding & Layout Engine Controls -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>GitForge IDE — The Quarterly Roadmap to 2027 Global Release</title>
+    <meta
+      name="description"
+      content="Review the official GitForge IDE release engineering timeline. Track our phase-gated execution path from kernel stabilization (Alpha) to enterprise sandboxing, cloud-edge federation networks, and the 2027 global launch."
+    />
+    <meta
+      name="keywords"
+      content="GitForge IDE Roadmap, Kernel Stabilization, Core VFS, Anycast Edge Mesh, Enterprise Sandboxing, AMD SEV-SNP, Universal Extension SDK, Chaos Engineering, CRDT-Fugue Convergence, Rayaan Tasnim, Olympiad Edge, IDAI Universe"
+    />
+    <meta name="author" content="Rayaan Tasnim" />
+    <meta name="publisher" content="IDAI Universe" />
+    <meta
+      name="copyright"
+      content="© 2027 GitForge IDE. All rights reserved."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:none, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://github.com/rayaantasnim/GitForge" />
+
+    <!-- Open Graph / Facebook Meta Tags (Images Removed) -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GitForge IDE" />
+    <meta
+      property="og:title"
+      content="GitForge IDE — The Quarterly Roadmap to 2027 Global Release"
+    />
+    <meta
+      property="og:description"
+      content="A rigorous, phase-gated engineering plan navigating from low-level C++23 kernel safety verification to global multi-region edge compute federation. Scheduled for worldwide availability in 2027."
+    />
+    <meta
+      property="og:url"
+      content="https://github.com/rayaantasnim/GitForge"
+    />
+    <meta
+      property="article:published_time"
+      content="2026-10-23T18:00:00+06:00"
+    />
+    <meta property="article:author" content="Rayaan Tasnim" />
+    <meta
+      property="article:section"
+      content="Product Roadmap & Release Engineering"
+    />
+
+    <!-- Twitter / X Card Meta Tags (Images Removed) -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GitForgeIDE" />
+    <meta name="twitter:creator" content="@RayaanTasnim" />
+    <meta
+      name="twitter:title"
+      content="GitForge IDE — The Quarterly Roadmap to 2027 Global Release"
+    />
+    <meta
+      name="twitter:description"
+      content="Tracking milestone delivery matrices from Q1 2026 Alpha VFS invariants to the final Q2 2027 public deployment window."
+    />
+
+    <!-- Unified Schema.org JSON-LD Structured Data Block -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://github.com/rayaantasnim/GitForge",
+            "isPartOf": {
+              "@type": "WebPage",
+              "@id": "https://github.com/rayaantasnim/GitForge",
+              "url": "https://github.com/rayaantasnim/GitForge",
+              "name": "GitForge IDE — The Quarterly Roadmap to 2027 Global Release",
+              "description": "Technical program roadmapping documentation detailing the engineering milestones, feature deliverables, compliance criteria, and rollout schedules for the GitForge platform launch."
+            },
+            "headline": "The Quarterly Roadmap to 2027 Global Release",
+            "description": "An exhaustive phase-gated rollout plan outlining milestone exit targets for the GitForge software platform: C++23 core VFS proofs, global Anycast BGP multi-region mesh node turn-up, AMD SEV-SNP cryptographic attestation integration, and chaos validation.",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": "https://github.com/rayaantasnim/GitForge",
+            "datePublished": "2026-10-23T18:00:00+06:00",
+            "dateModified": "2026-10-23T18:00:00+06:00",
+            "author": {
+              "@type": "Person",
+              "name": "Rayaan Tasnim",
+              "jobTitle": "System Architect",
+              "affiliation": {
+                "@type": "Organization",
+                "name": "IDAI Universe"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "GitForge IDE",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://github.com/rayaantasnim/GitForge"
+              },
+              "slogan": "Precision Execution to Worldwide Production Delivery"
+            },
+            "keywords": "Milestone Alpha Lock, Edge Compute Mesh, Confidential Enclaves, Extension SDK Preview, Chaos Verification, Worldwide Federation, Rayaan Tasnim",
+            "proficiencyLevel": "Advanced",
+            "articleSection": "Release Engineering & Infrastructure Strategy Plan"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="release.html"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Cosmic Cyberpunk Styles -->
+    <link rel="stylesheet" href="css/release.css" />
+  </head>
+  <body
+    class="min-h-screen bg-space text-slate-100 grid-pattern relative selection:bg-cyan-500/30 selection:text-cyan-200"
+  >
+    <!-- 1. STICKY FIXED TOP HEADER LAYER -->
+    <header
+      class="fixed top-0 left-0 right-0 z-40 h-20 bg-space/85 backdrop-blur-md border-b border-cyan-500/15 flex items-center justify-between px-6 md:px-12 transition-all duration-300"
+    >
+      <!-- Navbar Brand Text strictly on the left with neon glowing dot indicator -->
+      <a
+        href="core.html"
+        class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tight text-white group"
+      >
+        <span>GitForge IDE</span>
+        <span class="cyber-dot" aria-label="Engine Active"></span>
+      </a>
+
+      <!-- Single Custom Hamburger Toggle Icon on the far right -->
+      <button
+        id="menuToggle"
+        class="relative group p-3 text-cyan-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg"
+        aria-label="Open Navigation Panel"
+      >
+        <div class="w-7 h-5 flex flex-col justify-between items-end">
+          <span
+            class="w-7 h-0.5 bg-cyan-400 rounded-full group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+        </div>
+      </button>
+    </header>
+
+    <!-- 2. RIGHT-SIDE SLIDEDOWN/OVERLAY MOBILE-RESPONSIVE MENU -->
+    <div
+      id="menuBackdrop"
+      class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <aside
+      id="menuOverlay"
+      class="fixed top-0 right-0 bottom-0 w-full sm:w-96 max-w-full bg-[#070714]/98 border-l border-cyan-500/30 z-50 p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-[-16px_0_40px_rgba(0,0,0,0.85)] pointer-events-none overflow-y-auto"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between pb-8 mb-8 border-b border-cyan-500/20"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-sm font-mono tracking-widest text-cyan-400 uppercase"
+              >Ecosystem Map</span
+            >
+          </div>
+          <button
+            id="menuClose"
+            class="px-3 py-1.5 rounded text-xs font-mono tracking-wider text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+            aria-label="Close Navigation Panel"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-5 text-left font-mono">
+          <a
+            href="core.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Core</span>
+          </a>
+          <a
+            href="facilities.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Facilities</span>
+          </a>
+          <a
+            href="technology.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Technology</span>
+          </a>
+          <a
+            href="release.html"
+            class="nav-menu-link text-xl text-cyan-400 font-semibold tracking-wide flex items-center gap-3"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"
+            ></span>
+            <span>Release</span>
+          </a>
+          <a
+            href="contributor.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Contributor</span>
+          </a>
+          <a
+            href="architecture.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Architecture</span>
+          </a>
+          <a
+            href="ecosystem.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Ecosystem</span>
+          </a>
+        </nav>
+      </div>
+
+      <div
+        class="pt-8 border-t border-cyan-500/15 font-mono text-xs text-slate-400 space-y-1"
+      >
+        <p class="text-cyan-400 font-medium">GitForge IDE System v2027</p>
+        <p>Authorized by Rayaan Tasnim</p>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20">
+      <!-- 3. PREMIUM HERO BANNER -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center px-6 md:px-12 overflow-hidden cosmic-gradient-bg border-b border-cyan-500/15"
+      >
+        <div
+          class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[620px] h-[620px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-10 left-10 w-[400px] h-[400px] bg-purple-700/15 rounded-full blur-[120px] pointer-events-none"
+        ></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 py-20">
+          <div
+            class="inline-flex items-center gap-3 px-4 py-1.5 mb-8 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-xs font-mono text-cyan-300 tracking-wider"
+          >
+            <span>QUARTERLY ROADMAP</span>
+            <span>·</span>
+            <span>2026 - 2027 TIMELINE</span>
+            <span>·</span>
+            <span class="text-matrixGreen">AUTHORIZED BY RAYAAN TASNIM</span>
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto"
+          >
+            The Quarterly
+            <span
+              class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent"
+              >Roadmap to 2027</span
+            >
+            Global Release
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+          >
+            A rigorous, phase-gated execution plan navigating from low-level
+            C++23 kernel stabilization to global multi-region edge federation.
+            Target delivery aligned for worldwide production availability in
+            2027.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="contributor.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-semibold rounded-md transition-all duration-200 cyber-glow-cyan text-sm tracking-wide"
+            >
+              Join as Contributor &rarr;
+            </a>
+            <a
+              href="architecture.html"
+              class="px-8 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-semibold rounded-md border border-cyan-500/30 transition-all duration-200 text-sm tracking-wide"
+            >
+              Examine Docker Sandboxes
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXACTLY 6 HYPER-DETAILED CONCEPTUAL ROWS -->
+      <section
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 space-y-28 md:space-y-36"
+      >
+        <!-- CONCEPTUAL ROW 1: Q1 2026 -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Milestone 01 · Q1 2026 Deliverable</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Kernel Stabilization &amp; Core VFS Invariants Alpha
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Q1 2026 focuses on formal verification of the core C++23 Virtual
+              File System and memory-mapped AST tree structures. The team
+              concludes memory safety proofs and benchmarks parsing pipelines
+              across massive Linux and Chromium codebases.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Deliverables include the deterministic linear memory allocator,
+              initial WebAssembly worker harness, and zero-copy JSON-RPC
+              protocol implementation.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300 space-y-2"
+            >
+              <div class="text-cyan-400 font-semibold">
+                // Q1 2026 Milestone Exit Criteria
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-slate-400">
+                <div>
+                  AST Parsing Target:
+                  <span class="text-cyan-300 font-bold">&gt; 4.5M LOC/sec</span>
+                </div>
+                <div>
+                  Memory Overhead:
+                  <span class="text-cyan-300 font-bold"
+                    >&lt; 150MB baseline</span
+                  >
+                </div>
+                <div>
+                  Fuzzing Coverage:
+                  <span class="text-cyan-300 font-bold"
+                    >98.4% Branch Coverage</span
+                  >
+                </div>
+                <div>
+                  Status:
+                  <span class="text-matrixGreen font-bold"
+                    >VERIFIED COMPLETE</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Kernel Stabilization Alpha Milestone"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MILESTONE_Q1_2026 // ALPHA_LOCK
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 2: Q2 2026 -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Global Edge Deployment Milestone"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MILESTONE_Q2_2026 // EDGE_MESH
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Milestone 02 · Q2 2026 Deliverable</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Global Edge Deployment &amp; Multi-Region Compute Mesh
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              In Q2 2026, GitForge provisions its Anycast edge compilation mesh
+              across Tier-1 data facilities in North America, Western Europe,
+              and East Asia. Anycast BGP routing contracts are finalized with
+              cloud carriers.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Simultaneously, the content-addressable storage (CAS) caching
+              layer goes live, allowing instant global deduplication of compiled
+              dependencies and Docker base images.
+            </p>
+            <div
+              class="flex items-center gap-4 text-xs font-mono text-slate-300 bg-navy/60 p-3 rounded border border-cyan-500/15"
+            >
+              <span class="text-matrixGreen">34 Active PoPs</span>
+              <span>·</span>
+              <span class="text-cyan-300">Anycast BGP Active</span>
+              <span>·</span>
+              <span class="text-slate-400">Global Deduplication</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 3: Q3 2026 -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Milestone 03 · Q3 2026 Deliverable</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Enterprise Sandboxing &amp; Hardware Security Modules (HSM)
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Q3 2026 integrates enterprise-grade hardware isolation. Ephemeral
+              compiler VMs are bound to AMD SEV-SNP and Intel SGX confidential
+              computing enclaves, ensuring code cannot be inspected even by
+              hypervisor operators.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              HSM key escrow is introduced, allowing cryptographic code signing
+              directly from developer biometric keys or hardware security tokens
+              (FIDO2 / YubiKey).
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300"
+            >
+              <div class="text-magentaNeon font-semibold mb-1">
+                Confidential Enclaves: AMD SEV-SNP Validated
+              </div>
+              <div class="text-slate-400">
+                Zero host memory visibility. Cryptographic remote attestation
+                provided on every compiled production artifact.
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Enterprise Sandboxing & HSM Integration"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MILESTONE_Q3_2026 // HSM_ENCLAVE
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 4: Q4 2026 -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Developer Preview & Universal Extension SDK"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MILESTONE_Q4_2026 // EXTENSION_SDK
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Milestone 04 · Q4 2026 Deliverable</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Developer Preview &amp; Universal Extension SDK Launch
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Q4 2026 invites 50,000 beta engineers to experience the GitForge
+              Developer Preview. The Universal Extension SDK is published,
+              enabling authors to compile plugins written in TypeScript, Rust,
+              or C++ into sandboxed WebAssembly extensions.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              The first 500 verified community packages—ranging from AI syntax
+              explainers to Kubernetes telemetry visualizers—launch on the
+              decentralized marketplace.
+            </p>
+            <div
+              class="flex items-center gap-6 pt-2 font-mono text-xs text-slate-400"
+            >
+              <div>
+                Preview Seats:
+                <span class="text-cyan-300">50,000 Engineers</span>
+              </div>
+              <div>
+                SDK Languages:
+                <span class="text-cyan-300">Rust, TS, C++, Zig</span>
+              </div>
+              <div>
+                Launch Extensions:
+                <span class="text-cyan-300">500+ Curated</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 5: Q1 2027 -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Milestone 05 · Q1 2027 Deliverable</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Autonomous Verification &amp; Chaos Engineering Trials
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Prior to wide release, GitForge executes exhaustive chaos
+              engineering trials. Background agents simulate global submarine
+              cable severances, edge facility outages, and malicious AST
+              injection payloads.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              The collaborative CRDT-Fugue kernel passes 100,000 automated
+              conflict permutations with zero state drift or silent corruption,
+              completing the safety audit required for enterprise deployment.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-400 space-y-1"
+            >
+              <div>
+                Chaos Scenarios Executed:
+                <span class="text-cyan-300 font-bold"
+                  >1.2 Million Injection Cycles</span
+                >
+              </div>
+              <div>
+                State Convergence Invariant:
+                <span class="text-cyan-300 font-bold"
+                  >100.000% Absolute Consistency</span
+                >
+              </div>
+              <div>
+                Security Compliance:
+                <span class="text-cyan-300 font-bold"
+                  >SOC 2 Type II Certified</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Autonomous Verification & Chaos Engineering Trials"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MILESTONE_Q1_2027 // CHAOS_VERIFIED
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 6: Q2 2027 -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Global Production Release 2027"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  MILESTONE_Q2_2027 // GLOBAL_LAUNCH
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Milestone 06 · Q2 2027 Final Milestone</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Global Production Release &amp; Worldwide Federation Launch
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Targeted for worldwide availability in 2027, GitForge launches
+              publicly under the auspices of Rayaan Tasnim, powered by Olympiad
+              Edge and sponsored by IDAI Universe.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              The platform opens to millions of engineers worldwide, providing
+              free public workspace compute and unmatched collaboration for
+              open-source and enterprise developers alike.
+            </p>
+            <div class="flex flex-wrap gap-3 font-mono text-xs">
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Global GA 2027</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >GitHub Federated</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Olympiad Edge Core</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ONE STRIKING CONCLUSION SECTION -->
+      <section
+        class="relative py-24 px-6 md:px-12 my-20 border-y border-cyan-500/20 bg-gradient-to-b from-[#090b1e]/90 via-[#05050a] to-[#090b1e]/90"
+      >
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
+          <div
+            class="text-xs font-mono text-cyan-400 uppercase tracking-widest"
+          >
+            Roadmap Synthesis
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Building the Next Generation of Software Craft
+          </h2>
+          <p
+            class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            Our quarterly milestones define a clear, non-negotiable path to a
+            modern engineering ecosystem. Discover our contributor protocol and
+            code submission invariants.
+          </p>
+          <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a
+              href="contributor.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-bold rounded text-sm tracking-wide cyber-glow-cyan transition-all"
+            >
+              Read Contributor Guidelines &rarr;
+            </a>
+            <a
+              href="architecture.html"
+              class="px-8 py-3.5 border border-cyan-500/40 hover:border-cyan-400 bg-space text-slate-200 font-semibold rounded text-sm tracking-wide transition-all"
+            >
+              Inspect VM Architecture
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. THE GLOBAL STATIC MINIMALIST 5-LINE FOOTER -->
+    <footer
+      class="border-t border-cyan-500/20 bg-[#040408] py-14 px-6 text-center font-mono text-xs md:text-sm text-slate-400 leading-relaxed tracking-wider"
+    >
+      <div class="space-y-2">
+        <p class="text-slate-300">Authorized by Rayaan Tasnim</p>
+        <p class="text-slate-400">&copy; GitForge IDE; All rights reserved</p>
+        <p class="text-cyan-400">Powered by Olympiad Edge</p>
+        <p class="text-magentaNeon">Sponsored by IDAI Universe</p>
+        <p class="text-matrixGreen">Launched by GitHub</p>
+      </div>
+    </footer>
+
+    <!-- GSAP INTERACTIVE LOGIC SCRIPT -->
+    <script src="js/release.js"></script>
+  </body>
+</html>

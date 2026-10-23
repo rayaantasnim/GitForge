@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <!-- Character Encoding & Layout Engine Controls -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>GitForge IDE — Technology & Deep Stack Engine Specifications</title>
+    <meta
+      name="description"
+      content="Explore GitForge IDE's low-level technical architecture specifications. Features a bare-metal C++23 native execution core, WebAssembly threads with SharedArrayBuffer concurrency, 128-bit SIMD vectorized text parsers, and zero-overhead Rust FFI memory bindings."
+    />
+    <meta
+      name="keywords"
+      content="GitForge IDE, C++23 Kernel, WebAssembly Threads, SharedArrayBuffer, Fixed-Width SIMD, Vectorized String Search, Rust FFI, CXX Bindings, Tier-3 JIT Compiler, LMAX Disruptor Ring Buffer, Time-Travel Debugging, Rayaan Tasnim, Olympiad Edge"
+    />
+    <meta name="author" content="Rayaan Tasnim" />
+    <meta name="publisher" content="IDAI Universe" />
+    <meta
+      name="copyright"
+      content="© 2027 GitForge IDE. All rights reserved."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:none, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://github.com/rayaantasnim/GitForge" />
+
+    <!-- Open Graph / Facebook Meta Tags (Images Removed) -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GitForge IDE" />
+    <meta
+      property="og:title"
+      content="GitForge IDE — Technology & Deep Stack Engine Specifications"
+    />
+    <meta
+      property="og:description"
+      content="Deep-stack engineering specifications of the GitForge core engine substrate. Shattering browser engine limits via ISO C++23 arena allocators, parallel WASM worker multi-threading, and 6.4 GB/s SIMD search loops."
+    />
+    <meta property="og:url" content="https://github.com/rayaantasnim/GitForge" />
+    <meta
+      property="article:published_time"
+      content="2026-10-23T18:05:00+06:00"
+    />
+    <meta property="article:author" content="Rayaan Tasnim" />
+    <meta
+      property="article:section"
+      content="Systems Programming & Compiler Engineering"
+    />
+
+    <!-- Twitter / X Card Meta Tags (Images Removed) -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GitForgeIDE" />
+    <meta name="twitter:creator" content="@RayaanTasnim" />
+    <meta
+      name="twitter:title"
+      content="GitForge IDE — Technology & Deep Stack Engine Specifications"
+    />
+    <meta
+      name="twitter:description"
+      content="Technical dive into our multi-threaded WASM runtime, lockless ring buffers, and sub-linear Boyer-Moore vectorized search arrays."
+    />
+
+    <!-- Unified Schema.org JSON-LD Structured Data Block -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://github.com/rayaantasnim/GitForge",
+            "isPartOf": {
+              "@type": "WebPage",
+              "@id": "https://github.com/rayaantasnim/GitForge",
+              "url": "https://github.com/rayaantasnim/GitForge",
+              "name": "GitForge IDE — Technology & Deep Stack Engine Specifications",
+              "description": "Granular technical specifications and low-level engineering metrics covering the native compilation loops, concurrency models, and runtime architectures of GitForge IDE."
+            },
+            "headline": "Deep Stack Engine: C++23, WASM & SIMD",
+            "description": "An exhaustive analysis of GitForge's hyper-performance systems design, charting the ISO C++23 zero-allocation rope buffer parsers, WebAssembly Atomics multi-threading arrays, 128-bit fixed-width parallel registers, and lockless LMAX Disruptor event systems.",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": "https://github.com/rayaantasnim/GitForge",
+            "datePublished": "2026-10-23T18:05:00+06:00",
+            "dateModified": "2026-10-23T18:05:00+06:00",
+            "author": {
+              "@type": "Person",
+              "name": "Rayaan Tasnim",
+              "jobTitle": "System Architect",
+              "affiliation": {
+                "@type": "Organization",
+                "name": "IDAI Universe"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "GitForge IDE",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://github.com/rayaantasnim/GitForge"
+              },
+              "slogan": "Uncompromising Bare-Metal Speeds inside the Web Browser"
+            },
+            "keywords": "C++23 Invariants, Arena Bump Allocator, Atomics Primitives, Lockless Ring Buffers, WASM SIMD-128, CXX Type Safety, Tier-3 JIT Synthesis, LMAX Disruptor Engine",
+            "proficiencyLevel": "Expert",
+            "articleSection": "Compiler Engineering & Low-Level Systems Architecture"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="design/tech.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Cosmic Cyberpunk Styles -->
+    <link rel="stylesheet" href="css/tech.css" />
+  </head>
+  <body
+    class="min-h-screen bg-space text-slate-100 grid-pattern relative selection:bg-cyan-500/30 selection:text-cyan-200"
+  >
+    <!-- 1. STICKY FIXED TOP HEADER LAYER -->
+    <header
+      class="fixed top-0 left-0 right-0 z-40 h-20 bg-space/85 backdrop-blur-md border-b border-cyan-500/15 flex items-center justify-between px-6 md:px-12 transition-all duration-300"
+    >
+      <!-- Navbar Brand Text strictly on the left with neon glowing dot indicator -->
+      <a
+        href="core.html"
+        class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tight text-white group"
+      >
+        <span>GitForge IDE</span>
+        <span class="cyber-dot" aria-label="Engine Active"></span>
+      </a>
+
+      <!-- Single Custom Hamburger Toggle Icon on the far right -->
+      <button
+        id="menuToggle"
+        class="relative group p-3 text-cyan-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg"
+        aria-label="Open Navigation Panel"
+      >
+        <div class="w-7 h-5 flex flex-col justify-between items-end">
+          <span
+            class="w-7 h-0.5 bg-cyan-400 rounded-full group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+        </div>
+      </button>
+    </header>
+
+    <!-- 2. RIGHT-SIDE SLIDEDOWN/OVERLAY MOBILE-RESPONSIVE MENU -->
+    <div
+      id="menuBackdrop"
+      class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <aside
+      id="menuOverlay"
+      class="fixed top-0 right-0 bottom-0 w-full sm:w-96 max-w-full bg-[#070714]/98 border-l border-cyan-500/30 z-50 p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-[-16px_0_40px_rgba(0,0,0,0.85)] pointer-events-none overflow-y-auto"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between pb-8 mb-8 border-b border-cyan-500/20"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-sm font-mono tracking-widest text-cyan-400 uppercase"
+              >Ecosystem Map</span
+            >
+          </div>
+          <button
+            id="menuClose"
+            class="px-3 py-1.5 rounded text-xs font-mono tracking-wider text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+            aria-label="Close Navigation Panel"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-5 text-left font-mono">
+          <a
+            href="core.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Core</span>
+          </a>
+          <a
+            href="facilities.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Facilities</span>
+          </a>
+          <a
+            href="technology.html"
+            class="nav-menu-link text-xl text-cyan-400 font-semibold tracking-wide flex items-center gap-3"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"
+            ></span>
+            <span>Technology</span>
+          </a>
+          <a
+            href="release.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Release</span>
+          </a>
+          <a
+            href="contributor.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Contributor</span>
+          </a>
+          <a
+            href="architecture.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Architecture</span>
+          </a>
+          <a
+            href="ecosystem.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Ecosystem</span>
+          </a>
+        </nav>
+      </div>
+
+      <div
+        class="pt-8 border-t border-cyan-500/15 font-mono text-xs text-slate-400 space-y-1"
+      >
+        <p class="text-cyan-400 font-medium">GitForge IDE System v2027</p>
+        <p>Authorized by Rayaan Tasnim</p>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20">
+      <!-- 3. PREMIUM HERO BANNER -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center px-6 md:px-12 overflow-hidden cosmic-gradient-bg border-b border-cyan-500/15"
+      >
+        <div
+          class="absolute top-1/4 left-1/3 w-[580px] h-[580px] bg-magentaNeon/10 rounded-full blur-[140px] pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none"
+        ></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 py-20">
+          <div
+            class="inline-flex items-center gap-3 px-4 py-1.5 mb-8 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-xs font-mono text-cyan-300 tracking-wider"
+          >
+            <span>C++23 KERNEL</span>
+            <span>·</span>
+            <span>WASM SIMD-128</span>
+            <span>·</span>
+            <span class="text-matrixGreen">HARDWARE ACCELERATED</span>
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto"
+          >
+            Deep Stack Engine:
+            <span
+              class="bg-gradient-to-r from-magentaNeon via-purple-300 to-cyanNeon bg-clip-text text-transparent"
+              >C++23, WASM &amp; SIMD</span
+            >
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+          >
+            GitForge shatters the limitations of interpreted web IDEs. By
+            compiling native C++23 core execution loops and vectorized SIMD
+            string parsers to WebAssembly, text manipulation executes at
+            bare-metal speeds.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="release.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-semibold rounded-md transition-all duration-200 cyber-glow-cyan text-sm tracking-wide"
+            >
+              View 2027 Roadmap &rarr;
+            </a>
+            <a
+              href="architecture.html"
+              class="px-8 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-semibold rounded-md border border-cyan-500/30 transition-all duration-200 text-sm tracking-wide"
+            >
+              Inspect VM Architecture
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXACTLY 6 HYPER-DETAILED CONCEPTUAL ROWS -->
+      <section
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 space-y-28 md:space-y-36"
+      >
+        <!-- CONCEPTUAL ROW 1: C++23 Native Execution Core -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Specification 01 · Compiler Standard</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              C++23 Native Execution Core &amp; Zero-Allocation Parsers
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              The fundamental tokenizer, tree-sitter bindings, and rope buffer
+              data structures are authored in ISO C++23. Taking full advantage
+              of <code class="text-cyan-300 font-mono">std::expected</code>,
+              multidimensional subscript operators, and consteval
+              metaprogramming, the engine compiles without dynamic memory
+              allocations during inner loops.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              By eradicating heap churn, GitForge sustains deterministic
+              execution timing. Code indexing runs at over 4.8 million lines of
+              code per second per thread.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300 space-y-2"
+            >
+              <div class="text-cyan-400 font-semibold">
+                // C++23 Kernel Invariants
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-slate-400">
+                <div>
+                  Standard Dialect:
+                  <span class="text-cyan-300 font-bold"
+                    >ISO/IEC 14882:2023</span
+                  >
+                </div>
+                <div>
+                  Allocation Strategy:
+                  <span class="text-cyan-300 font-bold"
+                    >Monotonic Arena Bump</span
+                  >
+                </div>
+                <div>
+                  Parse Throughput:
+                  <span class="text-cyan-300 font-bold">4.82 M LOC/sec</span>
+                </div>
+                <div>
+                  Cache Miss Rate:
+                  <span class="text-cyan-300 font-bold"
+                    >&lt; 1.8% L1 Cache</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="C++23 Native Execution Core Architecture"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  CPP23 // ROPE_BUFFER_OPTIMIZED
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 2: WebAssembly Threads -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="WebAssembly Threads & SharedArrayBuffer Concurrency"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  WASM_THREAD // SHARED_MEM_POOL
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Specification 02 · Concurrency Runtime</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              WebAssembly Threads &amp; SharedArrayBuffer Concurrency
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              By combining the WebAssembly Threads proposal with low-level
+              Atomics primitives (<code class="text-cyan-300 font-mono"
+                >Atomics.wait</code
+              >
+              and <code class="text-cyan-300 font-mono">Atomics.notify</code>),
+              GitForge orchestrates a pool of dedicated worker threads accessing
+              a shared linear memory buffer.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              When large search queries or linting rules execute, work is
+              divided across thread partitions with zero serialization overhead,
+              returning results in parallel before human perception registers
+              latency.
+            </p>
+            <div
+              class="flex items-center gap-6 pt-2 font-mono text-xs text-slate-400"
+            >
+              <div>
+                Thread Count:
+                <span class="text-cyan-300"
+                  >Hardware Concurrency (up to 32)</span
+                >
+              </div>
+              <div>
+                IPC Latency:
+                <span class="text-cyan-300">0.02ms via Shared Memory</span>
+              </div>
+              <div>
+                Locking:
+                <span class="text-cyan-300">Lockless Ring Buffers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 3: 128-bit SIMD Vectorized Search -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Specification 03 · Vector Instructions</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              128-bit SIMD Vectorized String Search &amp; Tokenizer
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Text pattern matching across million-line repositories relies on
+              WebAssembly Fixed-Width SIMD (Single Instruction, Multiple Data).
+              Our search engine packs 16 bytes of UTF-8 text into a single
+              128-bit register, evaluating byte matches simultaneously.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              This delivers instantaneous across-project regex evaluation,
+              matching strings at 6.4 GB/s throughput directly within the
+              browser runtime environment without server round-trips.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300"
+            >
+              <div class="text-cyanNeon font-semibold mb-1">
+                Instruction Set: WASM SIMD-128 / AVX-512 Transpiled
+              </div>
+              <div class="text-slate-400">
+                Sub-linear Boyer-Moore and Hyperscan-inspired automaton
+                vectorized for parallel glyph stream classification.
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="128-bit SIMD Vectorized String Search"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  SIMD128 // VECTOR_THROUGHPUT
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 4: Rust Foreign Function Interface -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Memory-Safe Rust Bindings for Foreign Function Interfaces"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  RUST_FFI // MEMORY_SAFETY_GUARD
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Specification 04 · Memory Safety</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Memory-Safe Rust Bindings for Foreign Function Interfaces (FFI)
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              While C++ handles high-frequency raw memory pipelines, all network
+              transport, cryptographic signing, and extension validation layers
+              are built with Rust. Strongly typed CXX bindings connect the two
+              domains without runtime overhead.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Rust's borrow checker enforces strict ownership lifetimes across
+              the FFI boundary, preventing dangling pointers, use-after-free
+              conditions, or race conditions during multi-threaded background
+              parsing.
+            </p>
+            <div
+              class="flex items-center gap-4 text-xs font-mono text-slate-300 bg-navy/60 p-3 rounded border border-cyan-500/15"
+            >
+              <span class="text-matrixGreen">Zero Unsafe Blocks in IPC</span>
+              <span>·</span>
+              <span class="text-cyan-300">CXX Type Safety</span>
+              <span>·</span>
+              <span class="text-slate-400">Deterministic Drop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 5: Tier-3 JIT Code Synthesis -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Specification 05 · Dynamic Compilation</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Tier-3 JIT Code Synthesis &amp; Dynamic Specialization
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              GitForge incorporates an adaptive Just-In-Time (JIT) optimizer for
+              user scripts and macro extensions. Frequently executed code blocks
+              are dynamically profiled and recompiled into optimized machine
+              code sequences.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Hot loop branches are unwound, type checks are elided based on
+              runtime invariant tracking, and mathematical loops benefit from
+              automatic vectorization, yielding execution times rivaling native
+              C binaries.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-400 space-y-1"
+            >
+              <div>
+                Optimization Pipeline:
+                <span class="text-cyan-300 font-bold"
+                  >Tier 1 Bytecode &rarr; Tier 3 Specialized Machine Code</span
+                >
+              </div>
+              <div>
+                Deoptimization Bailout:
+                <span class="text-cyan-300 font-bold"
+                  >&lt; 0.12ms Safe Recovery</span
+                >
+              </div>
+              <div>
+                Profile Feedback:
+                <span class="text-cyan-300 font-bold"
+                  >Type Feedback Vectors</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Tier-3 JIT Code Synthesis & Dynamic Bytecode Specialization"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  JIT_COMPILER // TIER3_OPT
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 6: Deterministic Event Bus -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="High-Frequency Deterministic Event Bus Architecture"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  EVENT_RING // 10M_EVT_SEC
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Specification 06 · Dispatch Architecture</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              High-Frequency Deterministic Event Bus Architecture
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Editor user inputs, terminal keystrokes, and LSP semantic updates
+              flow into a high-capacity ring buffer modeled after the LMAX
+              Disruptor architecture. Millions of events per second are
+              sequenced without mutex contention.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every dispatched event carries an immutable monotonic logical
+              timestamp, enabling complete time-travel debugging, automated
+              replay of race conditions, and deterministic unit testing across
+              all internal subsystems.
+            </p>
+            <div class="flex flex-wrap gap-3 font-mono text-xs">
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Disruptor Ring Buffer</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Time-Travel Replay</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Deterministic Schedulers</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ONE STRIKING CONCLUSION SECTION -->
+      <section
+        class="relative py-24 px-6 md:px-12 my-20 border-y border-cyan-500/20 bg-gradient-to-b from-[#090b1e]/90 via-[#05050a] to-[#090b1e]/90"
+      >
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
+          <div
+            class="text-xs font-mono text-cyan-400 uppercase tracking-widest"
+          >
+            Engine Verdict
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight"
+          >
+            Maximum Computational Throughput for Developers
+          </h2>
+          <p
+            class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            By combining modern C++23 systems engineering with WebAssembly SIMD
+            acceleration, GitForge delivers uncompromising speed. Review our
+            quarterly milestones as we progress toward the global 2027 launch.
+          </p>
+          <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a
+              href="release.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-bold rounded text-sm tracking-wide cyber-glow-cyan transition-all"
+            >
+              Inspect Release Roadmap &rarr;
+            </a>
+            <a
+              href="contributor.html"
+              class="px-8 py-3.5 border border-cyan-500/40 hover:border-cyan-400 bg-space text-slate-200 font-semibold rounded text-sm tracking-wide transition-all"
+            >
+              Open-Source Guidelines
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. THE GLOBAL STATIC MINIMALIST 5-LINE FOOTER -->
+    <footer
+      class="border-t border-cyan-500/20 bg-[#040408] py-14 px-6 text-center font-mono text-xs md:text-sm text-slate-400 leading-relaxed tracking-wider"
+    >
+      <div class="space-y-2">
+        <p class="text-slate-300">Authorized by Rayaan Tasnim</p>
+        <p class="text-slate-400">&copy; GitForge IDE; All rights reserved</p>
+        <p class="text-cyan-400">Powered by Olympiad Edge</p>
+        <p class="text-magentaNeon">Sponsored by IDAI Universe</p>
+        <p class="text-matrixGreen">Launched by GitHub</p>
+      </div>
+    </footer>
+
+    <!-- GSAP INTERACTIVE LOGIC SCRIPT -->
+    <script src="js/tech.js"></script>
+  </body>
+</html>

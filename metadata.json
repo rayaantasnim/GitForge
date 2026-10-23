@@ -1,0 +1,6 @@
+{
+  "name": "GitForge IDE - Cosmic Cyberpunk Cloud Ecosystem",
+  "description": "Production-ready architectural multi-page ecosystem for GitForge IDE authorized by Rayaan Tasnim, targeting global release in 2027.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <!-- Character Encoding & Layout Engine Controls -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      GitForge IDE — Distributed Kernel Architecture & Core Ecosystem Layers
+    </title>
+    <meta
+      name="description"
+      content="Deep dive into the GitForge core engine substrate. Features a memory-mapped sparse VFS with sub-3.2ms AST hydration, distributed WebAssembly JSON-RPC LSP multiplexing, CRDT-Fugue collaboration kernels, and a 120 FPS hardware-accelerated WebGPU canvas editor viewport."
+    />
+    <meta
+      name="keywords"
+      content="GitForge IDE, VFS, AST Hydration, Merkle Tree Hashing, LSP Multiplexing, WebAssembly micro-threads, CRDT-Fugue 4.2, WebGPU Canvas Viewport, WGSL Compute Shaders, SharedArrayBuffers, Bump Allocator, Rayaan Tasnim, Olympiad Edge"
+    />
+    <meta name="author" content="Rayaan Tasnim" />
+    <meta name="publisher" content="IDAI Universe" />
+    <meta
+      name="copyright"
+      content="© 2027 GitForge IDE. All rights reserved."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://rayaantasnim.github.io/GitForge/" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GitForge IDE" />
+    <meta
+      property="og:title"
+      content="GitForge IDE — Distributed Kernel Architecture & Core Ecosystem Layers"
+    />
+    <meta
+      property="og:description"
+      content="Discover the low-latency workspace technologies powering next-era cloud native software engineering. Explore instant radix-tree VFS lookups, zero-copy IPC ring buffers, and pure GPU glyph shaders."
+    />
+    <meta
+      property="og:url"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+    <meta
+      property="og:image"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="GitForge IDE Distributed System Substrate diagram highlighting WebGPU, VFS, and WASM memory layout"
+    />
+    <meta
+      property="article:published_time"
+      content="2026-10-23T15:28:00+06:00"
+    />
+    <meta property="article:author" content="Rayaan Tasnim" />
+    <meta property="article:section" content="Compiler Infrastructure" />
+    <meta property="article:tag" content="Virtual File System" />
+    <meta property="article:tag" content="WebGPU" />
+    <meta property="article:tag" content="WebAssembly" />
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GitForgeIDE" />
+    <meta name="twitter:creator" content="@RayaanTasnim" />
+    <meta
+      name="twitter:title"
+      content="GitForge IDE — Distributed Kernel Architecture & Core Ecosystem Layers"
+    />
+    <meta
+      name="twitter:description"
+      content="Eradicating DOM exhaustion via WGSL compute shaders. Subpixel text rasterization running at 0.84ms per frame on 4K multi-million line monorepos."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rayaantasnim.github.io/GitForge/"
+    />
+
+    <!-- Unified Schema.org JSON-LD Structured Data Block -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "@id": "https://rayaantasnim.github.io/GitForge/#article",
+            "isPartOf": {
+              "@type": "WebPage",
+              "@id": "https://rayaantasnim.github.io/GitForge/",
+              "url": "https://rayaantasnim.github.io/GitForge/",
+              "name": "GitForge IDE — Distributed Kernel Architecture & Core Ecosystem Layers",
+              "description": "Technical specifications detailing the core software layers of GitForge, focusing on persistent storage abstractions, distributed language intelligence protocols, and viewports accelerated by WebGPU graphics pipelines."
+            },
+            "headline": "The Distributed Kernel Architecture for Next-Era Engineering",
+            "description": "An exhaustive technological breakdown of GitForge's primary subsystems: instant AST parsing algorithms, background worker JSON-RPC LSP relays, hybrid CRDT convergence matrices over QUIC, and memory isolation models using SharedArrayBuffers.",
+            "inLanguage": "en-US",
+            "mainEntityOfPage": "https://rayaantasnim.github.io/GitForge/",
+            "datePublished": "2026-10-23T15:28:00+06:00",
+            "dateModified": "2026-10-23T15:28:00+06:00",
+            "author": {
+              "@type": "Person",
+              "name": "Rayaan Tasnim",
+              "jobTitle": "System Architect",
+              "affiliation": {
+                "@type": "Organization",
+                "name": "IDAI Universe"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "GitForge IDE",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://rayaantasnim.github.io/GitForge/"
+              },
+              "slogan": "The Foundation of Cloud Native Software Engineering"
+            },
+            "keywords": "Lockless Radix-Tree, Merkle Tree SHA-256, JSON-RPC Multiplexer, CRDT-Fugue 4.2, WebTransport, Directed Acyclic State Graph, WGSL Compute Shaders, SharedArrayBuffer Arena",
+            "proficiencyLevel": "Advanced",
+            "articleSection": "Operating System & Editor Infrastructure"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://rayaantasnim.github.io/GitForge/",
+            "name": "GitForge IDE Core Engine",
+            "applicationCategory": "IDE",
+            "operatingSystem": "WebBrowser, Linux, macOS, Windows",
+            "softwareRequirements": "Hardware Support for WebGPU Contexts and SharedArrayBuffer Multi-Threading",
+            "provider": {
+              "@type": "Organization",
+              "name": "Olympiad Edge"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="design/core.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Cosmic Cyberpunk Styles -->
+    <link rel="stylesheet" href="css/core.css" />
+  </head>
+  <body
+    class="min-h-screen bg-space text-slate-100 grid-pattern relative selection:bg-cyan-500/30 selection:text-cyan-200"
+  >
+    <!-- 1. STICKY FIXED TOP HEADER LAYER (HIGH STACKING PRIORITY) -->
+    <header
+      class="fixed top-0 left-0 right-0 z-[9999] h-20 bg-space/85 backdrop-blur-md border-b border-cyan-500/15 flex items-center justify-between px-6 md:px-12 transition-all duration-300"
+    >
+      <!-- Navbar Brand Text strictly on the left with neon glowing dot indicator -->
+      <a
+        href="core.html"
+        class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tight text-white group"
+      >
+        <span>GitForge IDE</span>
+        <span class="cyber-dot" aria-label="Engine Active"></span>
+      </a>
+
+      <!-- Single Custom Hamburger Toggle Icon on the far right -->
+      <button
+        id="menuToggle"
+        class="relative group p-3 text-cyan-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg"
+        aria-label="Open Navigation Panel"
+      >
+        <div class="w-7 h-5 flex flex-col justify-between items-end">
+          <span
+            class="w-7 h-0.5 bg-cyan-400 rounded-full group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-cyan-400 rounded-full group-hover:w-7 group-hover:bg-white group-hover:shadow-[0_0_8px_#00f0ff] transition-all duration-200"
+          ></span>
+        </div>
+      </button>
+    </header>
+
+    <!-- 2. RIGHT-SIDE SLIDEDOWN/OVERLAY MOBILE-RESPONSIVE MENU -->
+    <div
+      id="menuBackdrop"
+      class="fixed inset-0 bg-black/75 backdrop-blur-sm z-[10000] opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <aside
+      id="menuOverlay"
+      class="fixed top-0 right-0 bottom-0 w-full sm:w-96 max-w-full bg-[#070714]/98 border-l border-cyan-500/30 z-[10001] p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-[-16px_0_40px_rgba(0,0,0,0.85)] pointer-events-none overflow-y-auto"
+    >
+      <div>
+        <!-- Top bar with brand and prominent Close Trigger Button -->
+        <div
+          class="flex items-center justify-between pb-8 mb-8 border-b border-cyan-500/20"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="text-sm font-mono tracking-widest text-cyan-400 uppercase"
+              >Ecosystem Map</span
+            >
+          </div>
+          <button
+            id="menuClose"
+            class="px-3 py-1.5 rounded text-xs font-mono tracking-wider text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+            aria-label="Close Navigation Panel"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Clean, Left-Aligned, Premium Dashboard Text Menu strictly direct hrefs -->
+        <nav class="flex flex-col space-y-5 text-left font-mono">
+          <a
+            href="core.html"
+            class="nav-menu-link text-xl text-cyan-400 font-semibold tracking-wide flex items-center gap-3"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"
+            ></span>
+            <span>Core</span>
+          </a>
+          <a
+            href="facilities.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Facilities</span>
+          </a>
+          <a
+            href="technology.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Technology</span>
+          </a>
+          <a
+            href="release.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Release</span>
+          </a>
+          <a
+            href="contributor.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Contributor</span>
+          </a>
+          <a
+            href="architecture.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Architecture</span>
+          </a>
+          <a
+            href="ecosystem.html"
+            class="nav-menu-link text-xl text-slate-300 hover:text-cyan-400 font-medium tracking-wide flex items-center gap-3"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <span>Ecosystem</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Quick footer metadata inside drawer -->
+      <div
+        class="pt-8 border-t border-cyan-500/15 font-mono text-xs text-slate-400 space-y-1"
+      >
+        <p class="text-cyan-400 font-medium">GitForge IDE System v2027</p>
+        <p>Authorized by Rayaan Tasnim</p>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20 relative z-1">
+      <!-- 3. PREMIUM HERO BANNER -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center px-6 md:px-12 overflow-hidden cosmic-gradient-bg border-b border-cyan-500/15"
+      >
+        <!-- Ambient cyber glow rings -->
+        <div
+          class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none"
+        ></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 py-20">
+          <div
+            class="inline-flex items-center gap-3 px-4 py-1.5 mb-8 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-xs font-mono text-cyan-300 tracking-wider"
+          >
+            <span>RELEASE TARGET 2027</span>
+            <span>·</span>
+            <span>CORE ECOSYSTEM ARCHITECTURE</span>
+            <span>·</span>
+            <span class="text-matrixGreen">STAGE: ACTIVE</span>
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto"
+          >
+            The Distributed
+            <span
+              class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent"
+              >Kernel Architecture</span
+            >
+            for Next-Era Engineering
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+          >
+            GitForge IDE unifies AST hydration, multi-threaded language servers,
+            and zero-latency operational transformation into an ultra-low
+            latency WebAssembly workspace. Engineered for instant compilation
+            and deep cloud synchronization.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="facilities.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-semibold rounded-md transition-all duration-200 cyber-glow-cyan text-sm tracking-wide"
+            >
+              Explore Facilities &rarr;
+            </a>
+            <a
+              href="technology.html"
+              class="px-8 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-semibold rounded-md border border-cyan-500/30 transition-all duration-200 text-sm tracking-wide"
+            >
+              Inspect C++23 &amp; WASM Engine
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXACTLY 6 HYPER-DETAILED CONCEPTUAL ROWS -->
+      <section
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 space-y-28 md:space-y-36"
+      >
+        <!-- CONCEPTUAL ROW 1: Virtual File System (VFS) -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Layer 01 · Persistent Storage Abstraction</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Unified Virtual File System with Instant AST Hydration
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              At the core of GitForge IDE lies a deterministic,
+              content-addressable Virtual File System (VFS) executing directly
+              on a memory-mapped sparse storage buffer. Instead of treating
+              source code as linear flat text files, the kernel converts every
+              source file into persistent, immutable Abstract Syntax Tree (AST)
+              nodes upon ingestion.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300 space-y-2"
+            >
+              <div class="text-cyan-400 font-semibold">
+                // VFS Performance Metrics &amp; Invariants
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-slate-400">
+                <div>
+                  Hydration Latency:
+                  <span class="text-cyan-300 font-bold"
+                    >&lt; 3.2ms / 100k LOC</span
+                  >
+                </div>
+                <div>
+                  Merkle Tree Hashing:
+                  <span class="text-cyan-300 font-bold"
+                    >SHA-256 Vectorized</span
+                  >
+                </div>
+                <div>
+                  Memory Overhead:
+                  <span class="text-cyan-300 font-bold"
+                    >12% baseline vs Raw Disk</span
+                  >
+                </div>
+                <div>
+                  Storage Mode:
+                  <span class="text-cyan-300 font-bold"
+                    >Lockless Radix-Tree</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Virtual File System & AST Hydration visualization"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  AST_KERNEL // VFS_STREAM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 2: LSP Multiplexing -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Distributed Language Server Protocol Multiplexing"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  LSP_DAEMON // IPC_CHANNEL_04
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Layer 02 · Language Intelligence</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Distributed Language Server Protocol (LSP) Multiplexing
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Standard web editors struggle with multi-language polyglot
+              workspaces because background language servers compete for
+              single-threaded JavaScript runtimes. GitForge solves this with a
+              high-throughput JSON-RPC multiplexer running within isolated
+              WebAssembly micro-threads.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Whether resolving semantic tokens across Rust, TypeScript, or Go
+              simultaneously, diagnostic computations are distributed across
+              background Web Workers with zero main-thread frame drops,
+              sustaining a pristine 120 FPS rendering cycle.
+            </p>
+            <div
+              class="flex items-center gap-6 pt-2 font-mono text-xs text-slate-400"
+            >
+              <div>
+                Rust Analyzer: <span class="text-cyan-300">Synchronized</span>
+              </div>
+              <div>
+                TypeScript v5.8: <span class="text-cyan-300">Warm Daemon</span>
+              </div>
+              <div>Gopls: <span class="text-cyan-300">Active</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 3: Collaborative Engine -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Layer 03 · Real-Time Collaboration</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Zero-Latency Collaborative Operational Transformation
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Engineered for distributed engineering squads across continents,
+              the GitForge Operational Transformation (OT) kernel operates via
+              hybrid Conflict-Free Replicated Data Types (CRDTs) anchored by
+              deterministic vector clocks.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Each user keystroke is treated as an atomic state mutation
+              dispatched through an authenticated QUIC/WebTransport tunnel.
+              Mutations merge peer-to-peer across edge relays without file
+              locks, phantom overwrites, or cursor desynchronization.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-300"
+            >
+              <div class="text-magentaNeon font-semibold mb-1">
+                Conflict Resolution Protocol: CRDT-Fugue 4.2
+              </div>
+              <div class="text-slate-400">
+                Median convergence time under 18ms across transatlantic fiber
+                backbones. Guaranteed eventual consistency with mathematical
+                proofs.
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Real-Time Collaborative Operational Transformation"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  PEER_SYNC // WEBP2P_QUIC
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 4: Reactive Delta State Graph -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Reactive Delta State Graph Synchronization"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  DELTA_GRAPH // CACHE_L2
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Layer 04 · State Machine</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Reactive Delta State Graph Synchronization
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every IDE state transition—active breakpoints, editor splits,
+              terminal buffers, and environment variables—is maintained inside a
+              directed acyclic state graph. When a state change occurs, GitForge
+              computes an optimized binary delta payload.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              This delta synchronization allows entire development sessions to
+              be resumed instantly on any browser, native desktop client, or
+              remote cloud terminal without reloading project assets or losing
+              debug state.
+            </p>
+            <div
+              class="flex items-center gap-4 text-xs font-mono text-slate-300 bg-navy/60 p-3 rounded border border-cyan-500/15"
+            >
+              <span class="text-matrixGreen"
+                >&#10003; Full Snapshot Recovery</span
+              >
+              <span>·</span>
+              <span class="text-cyan-300">Byte-Level Compression</span>
+              <span>·</span>
+              <span class="text-slate-400">Zero Cold Reboots</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 5: WebGL/WebGPU Viewport Rendering (ISOLATED STACKING CONTEXT) -->
+        <div
+          class="conceptual-row webgpu-isolated-layer relative z-1 isolate grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-copy lg:col-span-7 space-y-5">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Layer 05 · Viewport Acceleration</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Hardware-Accelerated WebGPU Canvas Viewport
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Traditional web code editors choke when rendering files containing
+              hundreds of thousands of lines due to DOM node exhaustion.
+              GitForge eliminates the DOM entirely for the editor surface,
+              routing glyph layout directly to a GPU-accelerated WebGPU
+              rendering pipeline.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Subpixel text rasterization, syntax color token mapping, and
+              minimap rendering are offloaded to high-performance GPU shaders,
+              guaranteeing buttery smooth scrolling and instant zooming on
+              multi-million line monorepos.
+            </p>
+            <div
+              class="p-4 rounded-lg bg-slate-950/80 border border-cyan-500/20 font-mono text-xs text-slate-400 space-y-1"
+            >
+              <div>
+                GPU Shader Pipeline:
+                <span class="text-cyan-300 font-bold"
+                  >WGSL Compute Shaders</span
+                >
+              </div>
+              <div>
+                Frame Render Time:
+                <span class="text-cyan-300 font-bold"
+                  >0.84ms @ 4K Resolution</span
+                >
+              </div>
+              <div>
+                Glyph Atlas:
+                <span class="text-cyan-300 font-bold"
+                  >Dynamic SDF Texture Cache</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-image-box lg:col-span-5 relative z-1 isolate">
+            <div
+              class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl relative z-1"
+            >
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900 z-1"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Hardware-Accelerated WebGPU Canvas Viewport Rendering"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  WEBGPU // SHADER_ATLAS_4K
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCEPTUAL ROW 6: Hermetic Memory Management & IPC -->
+        <div
+          class="conceptual-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+        >
+          <div class="content-image-box lg:col-span-5 order-2 lg:order-1">
+            <div class="cyber-frame rounded-xl overflow-hidden p-3 shadow-2xl">
+              <div class="corner-tl cyber-corner"></div>
+              <div class="corner-tr cyber-corner"></div>
+              <div class="corner-bl cyber-corner"></div>
+              <div class="corner-br cyber-corner"></div>
+              <div
+                class="relative aspect-video rounded-lg overflow-hidden bg-slate-900"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Hermetic Memory Management & IPC Serialization Subsystem"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 cyber-scanline"></div>
+                <div
+                  class="absolute bottom-2 left-2 bg-space/90 border border-cyan-500/30 px-2.5 py-1 rounded text-[11px] font-mono text-cyan-300"
+                >
+                  IPC_BUS // ARENA_ALLOCATOR
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-copy lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div
+              class="text-xs font-mono text-cyan-400 uppercase tracking-widest flex items-center gap-2"
+            >
+              <span class="w-2 h-0.5 bg-cyan-400"></span>
+              <span>Layer 06 · Memory &amp; Security Boundary</span>
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            >
+              Hermetic Memory Management &amp; IPC Serialization Subsystem
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Every plugin, parser, and terminal process communicates through a
+              zero-copy Inter-Process Communication (IPC) bus built atop
+              SharedArrayBuffers. Fixed-size bump allocators and memory arenas
+              guarantee deterministic deallocation without GC pauses.
+            </p>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Strict memory boundaries prevent third-party extensions from
+              accessing unauthorized workspace buffers, ensuring
+              enterprise-grade isolation for confidential intellectual property
+              and proprietary source codes.
+            </p>
+            <div class="flex flex-wrap gap-3 font-mono text-xs">
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Zero-Copy IPC</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Ring Buffer Queues</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 rounded"
+                >Sandboxed Memory Arenas</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ONE STRIKING CONCLUSION SECTION -->
+      <section
+        class="relative py-24 px-6 md:px-12 my-20 border-y border-cyan-500/20 bg-gradient-to-b from-[#090b1e]/90 via-[#05050a] to-[#090b1e]/90"
+      >
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6">
+          <div
+            class="text-xs font-mono text-cyan-400 uppercase tracking-widest"
+          >
+            Architectural Conclusion
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight"
+          >
+            The Foundation of Cloud Native Software Engineering
+          </h2>
+          <p
+            class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            The GitForge Core layers form a unified operating substrate where
+            raw computational efficiency converges with modern developer
+            workflows. Explore the distributed edge infrastructure powering our
+            execution network.
+          </p>
+          <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a
+              href="facilities.html"
+              class="px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-space font-bold rounded text-sm tracking-wide cyber-glow-cyan transition-all"
+            >
+              Proceed to Facilities &rarr;
+            </a>
+            <a
+              href="architecture.html"
+              class="px-8 py-3.5 border border-cyan-500/40 hover:border-cyan-400 bg-space text-slate-200 font-semibold rounded text-sm tracking-wide transition-all"
+            >
+              Inspect Docker Sandboxes
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. THE GLOBAL STATIC MINIMALIST 5-LINE FOOTER -->
+    <footer
+      class="border-t border-cyan-500/20 bg-[#040408] py-14 px-6 text-center font-mono text-xs md:text-sm text-slate-400 leading-relaxed tracking-wider relative z-1"
+    >
+      <div class="space-y-2">
+        <p class="text-slate-300">Authorized by Rayaan Tasnim</p>
+        <p class="text-slate-400">&copy; GitForge IDE; All rights reserved</p>
+        <p class="text-cyan-400">Powered by Olympiad Edge</p>
+        <p class="text-magentaNeon">Sponsored by IDAI Universe</p>
+        <p class="text-matrixGreen">Launched by GitHub</p>
+      </div>
+    </footer>
+
+    <!-- GSAP INTERACTIVE LOGIC SCRIPT -->
+    <script src="js/core.js"></script>
+  </body>
+</html>

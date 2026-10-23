@@ -1,0 +1,31 @@
+# -------------------------------------------------------------------------
+# GitForge IDE - Production robots.txt File
+# -------------------------------------------------------------------------
+
+# Target all standard search engine crawlers
+User-agent: *
+Allow: ./
+Allow: ./index.html
+Allow: ./release.html
+Allow: ./architecture.html
+Allow: ./core.html
+Allow: ./technology.html
+Allow: ./ecosystem.html
+Allow: ./facilities.html
+Allow: ./contributor.html
+Allow: ./css/
+Allow: ./design/
+Allow: ./js/
+
+# Disallow hidden environmental configurations and system manifest arrays
+Disallow: /.env.example
+Disallow: /.gitignore
+Disallow: /tsconfig.json
+Disallow: /package.json
+Disallow: /bun.lock
+Disallow: /vite.config.ts
+Disallow: /metadata.json
+Disallow: /src/
+
+# Unified XML Sitemap Location Registry
+Sitemap: https://rayaantasnim.github.io/GitForge/

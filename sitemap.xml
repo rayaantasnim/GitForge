@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <!-- 1. Quantum Developer Platform Home Page -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- 2. The Quarterly Roadmap to 2027 Global Release -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/release.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 3. Isolated Docker Sandbox & GitHub Actions VMs Architecture -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/architecture.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 4. Distributed Kernel Architecture & Core Ecosystem Layers -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/core.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 5. Technology & Deep Stack Engine Specifications -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/technology.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 6. Decentralized Extension Ecosystem & Marketplace -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/ecosystem.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 7. Hyper-Connected Edge Facilities & Real-Time Workflows -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/facilities.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 8. Open-Source Contribution Guidelines & Branching Protocol -->
+  <url>
+    <loc>https://github.com/rayaantasnim/GitForge/contributor.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>
